@@ -61,11 +61,21 @@ with open(budget_csv, 'r') as csvfile:
     averageChange = totalChange / (totalMonths - 1)
         
     # Prints into terminal
+    print()
+    print("Financial Analysis")
+    print()
+    print("-----------------------------")
+    print()
     print(f"Total Monthes: {totalMonths}")
+    print()
     print(f"Total: ${netTotal}")
+    print()
     print(f"Average Change: ${averageChange:.2f}")
+    print()
     print(f"Greatest Increase in Profits: {greatestIncreaseDate} (${greatestIncreaseAmount})")
+    print()
     print(f"Greatest Decrease in Profits: {greatestDecreaseDate} (${greatestDecreaseAmount})")
+    print()
     
     # Export into budget_analysis.txt
     with open(output_path, 'w') as txtfile:
@@ -76,5 +86,3 @@ with open(budget_csv, 'r') as csvfile:
         txtfile.write(f"Average Change: ${averageChange:.2f}\n")
         txtfile.write(f"Greatest Increase in Profits: {greatestIncreaseDate} (${greatestIncreaseAmount})\n")
         txtfile.write(f"Greatest Decrease in Profits: {greatestDecreaseDate} (${greatestDecreaseAmount})\n")
-
-    
